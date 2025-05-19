@@ -88,7 +88,7 @@ console.log(availableBooks)
 //(mantieni lo stesso formato e arrotonda al centesimo)
 
 const discountedBooks = availableBooks.map((availableBook) => {
-    const priceNumber = parseInt(availableBook.price);
+    const priceNumber = parseInt(availableBook.price); //posso usare ParseFloat e replace
     const discountedPrice = (priceNumber * 0.8).toFixed(2)
      return {
         ...availableBook,
@@ -144,7 +144,7 @@ console.log(ages)
 
 //Stampa in console l’età media degli autori dei libri.
 
-const averageAge = agesSum / books.length;
+const averageAge = agesSum / books.length; //ages
 
 console.log(averageAge)
 
