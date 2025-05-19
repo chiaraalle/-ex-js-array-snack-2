@@ -1,9 +1,4 @@
 /*
-Snack 1 - Filtra e Modifica
-Crea una funzione che somma due numeri.
-Crea un array (longBooks) con i libri che hanno più di 300 pagine;
-Creare un array (longBooksTitles) che contiene solo i titoli dei libri contenuti in longBooks.
-Stampa in console ogni titolo nella console.
 Snack 2 - Il primo libro scontato
 Creare un array (availableBooks) che contiene tutti i libri disponibili.
 Crea un array (discountedBooks) con gli availableBooks, ciascuno con il prezzo scontato del 20% (mantieni lo stesso formato e arrotonda al centesimo)
@@ -65,3 +60,33 @@ const books = [
 	  tags: ['html', 'advanced', 'junior', 'mid-senior']
   },
 ];
+
+
+//Snack 1 - Filtra e Modifica
+
+//Crea una funzione che somma due numeri.
+//funzione dichiarativa
+function somma(num1, num2){
+    const risultato = num1 + num2;
+    return risultato
+}
+
+//arrow function
+const somma2 = (num1, num2) => num1 + num2; 
+
+console.log(somma(6, 3), somma2(3, 2));
+
+//Crea un array (longBooks) con i libri che hanno più di 300 pagine;
+
+const longBooks = books.filter((book) => book.pages > 300);
+
+console.log(longBooks);
+
+//Creare un array (longBooksTitles) che contiene solo i titoli dei libri contenuti in longBooks.
+
+const longBooksTitles = longBooks.map((longBook) => longBook.title);
+
+console.log(longBooksTitles)
+
+//Stampa in console ogni titolo nella console.
+books.forEach(book => console.log(book.title));
